@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scaffold Feature Aggregator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #07070c;
+      color: #f5f5f7;
+      font-family: Inter, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #c084fc, #60a5fa, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card-hover {
+      transition: all 0.25s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(168, 85, 247, 0.18);
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .pill {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full"></div>
+    <div class="absolute bottom-[-120px] right-[-100px] w-[400px] h-[400px] bg-blue-500/20 blur-3xl rounded-full"></div>
+  </div>
+
+  <header class="max-w-7xl mx-auto px-6 py-12">
+    <div class="glass rounded-3xl p-10 border border-white/10">
+      <div class="flex flex-wrap gap-3 mb-6">
+        <span class="pill px-4 py-2 rounded-full text-sm">14 Claude Code Skills</span>
+        <span class="pill px-4 py-2 rounded-full text-sm">PRD → Production</span>
+        <span class="pill px-4 py-2 rounded-full text-sm">Backend + Android + iOS + Web</span>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+        Scaffold Feature
+        <span class="gradient-text">Aggregator</span>
+      </h1>
+
+      <p class="text-xl text-white/70 max-w-3xl leading-relaxed mb-8">
+        A complete AI-native engineering pipeline that takes a PRD + Figma and generates production-ready backend, Android, iOS, and web implementations — including polish, performance optimization, copy review, analytics instrumentation, and verification.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#pipeline" class="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">Explore Pipeline</a>
+        <a href="#skills" class="glass px-6 py-3 rounded-2xl font-semibold">View All Skills</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pb-24 space-y-24">
+
+    <section id="pipeline">
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <p class="uppercase tracking-[0.3em] text-purple-300 text-sm mb-3">Workflow</p>
+          <h2 class="text-4xl font-bold">The End-to-End Pipeline</h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-7 gap-4">
+        <div class="glass rounded-3xl p-5 card-hover">
+          <div class="text-3xl mb-3">📄</div>
+          <h3 class="font-bold text-lg mb-2">Input</h3>
+          <p class="text-white/70 text-sm">PRD + Figma designs</p>
+        </div>
+
+        <div class="glass rounded-3xl p-5 card-hover">
+          <div class="text-3xl mb-3">🧠</div>
+          <h3 class="font-bold text-lg mb-2">/scaffold</h3>
+          <p class="text-white/70 text-sm">Generates TRDs and launches parallel agents</p>
+        </div>
+
+        <div class="glass rounded-3xl p-5 card-hover">
+          <div class="text-3xl mb-3">⚙️</div>
+          <h3 class="font-bold text-lg mb-2">Build</h3>
+          <p class="text-white/70 text-sm">Backend + Android + iOS + Web</p>
+        </div>
+
+        <div class="glass rounded-3xl p-5 card-hover">
+          <div class="text-3xl mb-3">✨</div>
+          <h3 class="font-bold text-lg mb-2">Lovable</h3>
+          <p class="text-white/70 text-sm">Premium UI enhancements</p>
+        </div>
+
+        <div class="glass rounded-3xl p-5 card-hover">
+          <div class="text-3xl mb-3">⚡</div>
+          <h3 class="font-bold text-lg mb-2">Performance</h3>
+          <p class="text-white/70 text-sm">Compose optimization + benchmark APKs</p>
+        </div>
+
+        <div class="glass rounded-3xl p-5 card-hover">
+          <div class="text-3xl mb-3">📊</div>
+          <h3 class="font-bold text-lg mb-2">Analytics</h3>
+          <p class="text-white/70 text-sm">Ingest, verify & audit</p>
+        </div>
+
+        <div class="glass rounded-3xl p-5 card-hover">
+          <div class="text-3xl mb-3">🚀</div>
+          <h3 class="font-bold text-lg mb-2">Ship</h3>
+          <p class="text-white/70 text-sm">Production-ready output</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="mb-10">
+        <p class="uppercase tracking-[0.3em] text-blue-300 text-sm mb-3">Phases</p>
+        <h2 class="text-4xl font-bold">7 Structured Phases</h2>
+      </div>
+
+      <div class="relative timeline pl-10 space-y-10">
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-purple-400"></div>
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-2xl font-bold mb-3">1. Build the Feature</h3>
+            <p class="text-white/70 mb-4">The orchestrator parses PRDs, reviews Figma coverage, generates TRDs per platform, launches agents in parallel, deploys backend to staging, and validates stitching.</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="pill px-3 py-2 rounded-full text-sm">/scaffold</span>
+              <span class="pill px-3 py-2 rounded-full text-sm">/scaffold-backend</span>
+              <span class="pill px-3 py-2 rounded-full text-sm">/scaffold-frontend</span>
+              <span class="pill px-3 py-2 rounded-full text-sm">/scaffold-ios</span>
+              <span class="pill px-3 py-2 rounded-full text-sm">/scaffold-web</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-pink-400"></div>
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-2xl font-bold mb-3">2. Make It Beautiful</h3>
+            <p class="text-white/70 mb-4">Adds premium animations, glassmorphism, shimmer states, charts, spring transitions, and UI polish without changing feature behavior.</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="pill px-3 py-2 rounded-full text-sm">/lovable</span>
+              <span class="pill px-3 py-2 rounded-full text-sm">/lovable-ios</span>
+              <span class="pill px-3 py-2 rounded-full text-sm">/lovable-web</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-yellow-300"></div>
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-2xl font-bold mb-3">3. Optimize Performance</h3>
+            <p class="text-white/70 mb-4">Runs deep Compose optimization: skipping, prefetch, animation cleanup, layer isolation, image optimization, and benchmark APK generation.</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="pill px-3 py-2 rounded-full text-sm">/compose-perf</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-green-400"></div>
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-2xl font-bold mb-3">4. Polish the Copy</h3>
+            <p class="text-white/70 mb-4">Reviews every user-facing string for clarity, tone, grammar, capitalization, CTA quality, and legal/product risks.</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="pill px-3 py-2 rounded-full text-sm">/copy-review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-cyan-400"></div>
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-2xl font-bold mb-3">5. Add Analytics</h3>
+            <p class="text-white/70 mb-4">Reads Google Sheet event specs, discovers architecture patterns, generates tracking wrappers, and wires events into UI interactions.</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="pill px-3 py-2 rounded-full text-sm">/analytics-ingest</span>
+              <span class="pill px-3 py-2 rounded-full text-sm">/analytics-ingest-ios</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-orange-400"></div>
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-2xl font-bold mb-3">6. Verify Events</h3>
+            <p class="text-white/70 mb-4">Checks event definitions, Mixpanel registration, property integrity, and actual firing data across environments.</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="pill px-3 py-2 rounded-full text-sm">/analytics-verify</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-red-400"></div>
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-2xl font-bold mb-3">7. Cross-Platform Audit</h3>
+            <p class="text-white/70 mb-4">Compares Android vs iOS vs source-of-truth analytics specs to detect mismatches, missing properties, and dead events.</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="pill px-3 py-2 rounded-full text-sm">/analytics-audit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="mb-10">
+        <p class="uppercase tracking-[0.3em] text-green-300 text-sm mb-3">Reference</p>
+        <h2 class="text-4xl font-bold">The 14 Skills</h2>
+      </div>
+
+      <div class="overflow-hidden rounded-3xl glass border border-white/10">
+        <table class="w-full text-left">
+          <thead class="border-b border-white/10 bg-white/5">
+            <tr>
+              <th class="p-5">Skill</th>
+              <th class="p-5">Purpose</th>
+              <th class="p-5">Platform</th>
+              <th class="p-5">Phase</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-purple-300">/scaffold</td><td class="p-5 text-white/70">Orchestrates full feature build from PRD</td><td class="p-5">All</td><td class="p-5">Build</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-purple-300">/scaffold-backend</td><td class="p-5 text-white/70">Spring Boot backend generation</td><td class="p-5">Backend</td><td class="p-5">Build</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-purple-300">/scaffold-frontend</td><td class="p-5 text-white/70">Android Compose feature generation</td><td class="p-5">Android</td><td class="p-5">Build</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-purple-300">/scaffold-ios</td><td class="p-5 text-white/70">SwiftUI feature generation</td><td class="p-5">iOS</td><td class="p-5">Build</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-purple-300">/scaffold-web</td><td class="p-5 text-white/70">React + TypeScript + Tailwind generation</td><td class="p-5">Web</td><td class="p-5">Build</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-pink-300">/lovable</td><td class="p-5 text-white/70">Android premium UI recipes</td><td class="p-5">Android</td><td class="p-5">Polish</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-pink-300">/lovable-ios</td><td class="p-5 text-white/70">SwiftUI premium UI recipes</td><td class="p-5">iOS</td><td class="p-5">Polish</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-pink-300">/lovable-web</td><td class="p-5 text-white/70">Compose → React UI enhancement</td><td class="p-5">Web</td><td class="p-5">Polish</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-yellow-300">/compose-perf</td><td class="p-5 text-white/70">Compose scroll optimization</td><td class="p-5">Android</td><td class="p-5">Optimize</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-green-300">/copy-review</td><td class="p-5 text-white/70">Copy and grammar review</td><td class="p-5">All</td><td class="p-5">Content</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-cyan-300">/analytics-ingest</td><td class="p-5 text-white/70">Android analytics instrumentation</td><td class="p-5">Android</td><td class="p-5">Analytics</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-cyan-300">/analytics-ingest-ios</td><td class="p-5 text-white/70">iOS analytics instrumentation</td><td class="p-5">iOS</td><td class="p-5">Analytics</td></tr>
+            <tr class="border-b border-white/5"><td class="p-5 font-mono text-orange-300">/analytics-verify</td><td class="p-5 text-white/70">Mixpanel verification</td><td class="p-5">All</td><td class="p-5">Verify</td></tr>
+            <tr><td class="p-5 font-mono text-red-300">/analytics-audit</td><td class="p-5 text-white/70">Cross-platform parity audit</td><td class="p-5">Cross-platform</td><td class="p-5">Audit</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="glass rounded-3xl p-8">
+          <p class="uppercase tracking-[0.3em] text-yellow-300 text-sm mb-3">Quick Start</p>
+          <h2 class="text-3xl font-bold mb-6">First Feature Flow</h2>
+
+          <div class="space-y-5 text-white/75">
+            <div>
+              <div class="text-white font-semibold mb-1">1. Launch Claude Code</div>
+              <code class="block bg-black/30 rounded-xl p-3 text-sm">cd ~/StudioProjects<br/>claude</code>
+            </div>
+
+            <div>
+              <div class="text-white font-semibold mb-1">2. Scaffold the feature</div>
+              <code class="block bg-black/30 rounded-xl p-3 text-sm">/scaffold &lt;PRD&gt; --platforms backend,android,ios</code>
+            </div>
+
+            <div>
+              <div class="text-white font-semibold mb-1">3. Add premium polish</div>
+              <code class="block bg-black/30 rounded-xl p-3 text-sm">/lovable path/to/Screen.kt</code>
+            </div>
+
+            <div>
+              <div class="text-white font-semibold mb-1">4. Optimize performance</div>
+              <code class="block bg-black/30 rounded-xl p-3 text-sm">/compose-perf path/to/Screen.kt</code>
+            </div>
+
+            <div>
+              <div class="text-white font-semibold mb-1">5. Verify analytics</div>
+              <code class="block bg-black/30 rounded-xl p-3 text-sm">/analytics-verify repo spreadsheet-url</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <p class="uppercase tracking-[0.3em] text-red-300 text-sm mb-3">Guardrails</p>
+          <h2 class="text-3xl font-bold mb-6">When NOT To Use It</h2>
+
+          <div class="space-y-4 text-white/75">
+            <div class="bg-red-500/10 border border-red-500/20 rounded-2xl p-4">
+              ❌ Features touching more than 3 existing screens significantly
+            </div>
+            <div class="bg-red-500/10 border border-red-500/20 rounded-2xl p-4">
+              ❌ Multi-service backend migrations or infra overhauls
+            </div>
+            <div class="bg-red-500/10 border border-red-500/20 rounded-2xl p-4">
+              ❌ Open-ended PRDs with unresolved design questions
+            </div>
+            <div class="bg-red-500/10 border border-red-500/20 rounded-2xl p-4">
+              ❌ Platform-level redesigns or navigation refactors
+            </div>
+            <div class="bg-green-500/10 border border-green-500/20 rounded-2xl p-4">
+              ✅ Best for focused, independently shippable features
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="glass rounded-[2rem] p-10 text-center">
+        <div class="text-6xl mb-5">🚀</div>
+        <h2 class="text-5xl font-black mb-5">PRD → Production</h2>
+        <p class="max-w-3xl mx-auto text-xl text-white/70 leading-relaxed mb-8">
+          The Scaffold Feature Aggregator transforms product development into a structured AI-assisted workflow — from technical generation to UI polish, analytics verification, and cross-platform parity.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="pill px-4 py-2 rounded-full">Backend</span>
+          <span class="pill px-4 py-2 rounded-full">Android</span>
+          <span class="pill px-4 py-2 rounded-full">iOS</span>
+          <span class="pill px-4 py-2 rounded-full">Web</span>
+          <span class="pill px-4 py-2 rounded-full">Analytics</span>
+          <span class="pill px-4 py-2 rounded-full">Performance</span>
+          <span class="pill px-4 py-2 rounded-full">Premium UI</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
